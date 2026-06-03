@@ -1,0 +1,203 @@
+You’re very close—you already have the VS Code connection screen open 👍. I’ll walk you through **everything end‑to‑end** so you can:
+
+1. Install MySQL on CentOS
+2. Start and secure it
+3. Allow connections
+4. Connect from VS Code (like in your screenshot)
+
+***
+
+# ✅ 1. Install MySQL on CentOS
+
+On your CentOS VM, run:
+
+```bash
+sudo yum update -y
+
+# Install MySQL server (or MariaDB if MySQL repo isn't present)
+sudo yum install mysql-server -y
+```
+
+> ⚠️ On many CentOS systems, this installs **MariaDB**, which is fully compatible with MySQL (VS Code will still connect fine).
+
+***
+
+# ✅ 2. Start and Enable MySQL
+
+```bash
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+```
+
+Check status:
+
+```bash
+sudo systemctl status mysqld
+```
+
+***
+
+# ✅ 3. Get Root Password (if MySQL 5.7+)
+
+```bash
+sudo grep 'temporary password' /var/log/mysqld.log   THIS WAS NOT THE CASE FOR ME
+```
+
+Copy the password shown.
+
+***
+
+# ✅ 4. Secure MySQL
+
+Run:
+
+```bash
+sudo mysql_secure_installation
+```
+
+Do the following:
+
+* Set a new root password ✅
+* Remove anonymous users ✅       I DID NOT REMOVE
+* Disallow remote root login (recommended) ✅   
+* Remove test DB ✅ I DID NOT REMOVE
+
+***
+
+# ✅ 5. Create a User for VS Code (IMPORTANT)
+
+Do **NOT** use `root` from VS Code. Create a user:
+
+```sql
+sudo mysql -u root -p
+```
+
+Then inside MySQL:
+
+```sql
+CREATE USER 'sysadmin'@'%' IDENTIFIED BY 'Password1';
+GRANT ALL PRIVILEGES ON *.* TO 'vscodeuser'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+```
+
+`'%'` allows connections from any host.
+
+***
+
+# ✅ 6. Allow Remote Connections (if needed)
+
+Edit MySQL config:
+
+```bash
+sudo vi /etc/my.cnf
+```
+
+Find:
+
+```ini
+bind-address = 127.0.0.1
+```
+
+Change to:
+
+```ini
+bind-address = 0.0.0.0
+```
+
+Restart MySQL:
+
+```bash
+sudo systemctl restart mysqld
+```
+
+***
+
+# ✅ 7. Open Firewall Port
+
+```bash
+sudo firewall-cmd --permanent --add-service=mysql
+sudo firewall-cmd --reload
+```
+
+***
+
+# ✅ 8. Connect from VS Code (Your Screenshot)
+
+Now fill in your VS Code fields like this:
+
+### If VS Code is running **inside the same VM**
+
+* Host: `127.0.0.1`
+* Port: `3306`
+* Username: `vscodeuser`
+* Password: YourPassword123!
+* Database: (leave blank or put one)
+
+***
+
+### If VS Code is on your **local machine**
+
+* Host: `<VM IP address>` (example: `192.168.x.x`)
+* Port: `3306`
+* Username: `vscodeuser`
+* Password: YourPassword123!
+
+***
+
+# ✅ 9. About the “Premium Only” Message
+
+Your screenshot shows:
+
+> “Requires a Premium License”
+
+That means the **VS Code extension you're using (likely Database Client)** has limitations.
+
+### ✅ Alternatives (Free)
+
+Use one of these instead:
+
+* ✅ **MySQL (official extension)**
+* ✅ **SQLTools (recommended)**
+  * Install: `SQLTools` + `SQLTools MySQL/MariaDB Driver`
+
+***
+
+# ✅ 10. Test Connection
+
+Click **Connect**.
+
+If it fails, check:
+
+```bash
+telnet <host> 3306
+```
+
+or:
+
+```bash
+ss -tulnp | grep 3306
+```
+
+***
+
+# 🚀 Quick Summary
+
+* Install MySQL ✅
+* Start service ✅
+* Create user ✅
+* Open firewall ✅
+* Use VM IP in VS Code ✅
+
+***
+
+If you want, I can next:
+✅ Help you install **real MySQL 8 (not MariaDB)**  
+✅ Fix a connection error you're getting  
+✅ Set up SSH tunneling (more secure setup)
+
+
+
+
+After Downloading the files choose one of the table scripts to create.
