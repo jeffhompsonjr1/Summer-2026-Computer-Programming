@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a example site">
+    <title>Project Astra: Contact (Information Request)</title>
+    <!--Link to CSS page-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts embedded code-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="banner-container">
+            <img src="images/banner.png" id="top_banner" alt="Banner image showing moonscape.">
+        </div>
+        <div class="navContainer">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="personnel.html">Personnel</a></li>
+                    <li>Inventory</li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+
+            <h1> Contact - Project Astra</h1>
+
+            <p>
+                <img src="images/forms_documents.png" alt="Image of classified documents on a table"
+                    class="rounded_img">
+            </p>
+            <br>
+
+            <form method="post" action="#">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Dr. Morgan Ray" required>
+
+                    <p></p>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="classified@domain.gov" required>
+
+                    <p></p>
+
+                    <label for="phone">Contact Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    <p></p>
+
+
+                </fieldset>
+                <br>
+                <fieldset>
+
+                    <legend>Information Request</legend>
+
+                    <p>
+                        <img src="images/forms_planets.png" alt="Image of multiple planets" class="rounded_img">
+                    </p>
+
+                    <label for="planet">Planetary Exploration:</label>
+                    <select name="planet" id="planet">
+
+                        <option value="">-- Select an Planet</option>
+                        <option value="Virelia">Virelia</option>
+                        <option value="Caldris-7">Caldris-7</option>
+                        <option value="Lumaqua">Lumaqua</option>
+                        <option value="Tarsis Beta">Tarsis Beta</option>
+                        <option value="Echronis">Echronis</option>
+                        <option value="Seren V">Seren V</option>
+                        <option value="Xanthe Prime">Xanthe Prime</option>
+
+
+                    </select>
+
+                    <p>Planet Data Requested:</p>
+                    <label><input type="checkbox" id="planet-overview" name="planet-data[]" value="Overview">Planet
+                        Overview</label><br>
+                    <label><input type="checkbox" id="planet-lifeforms" name="planet-data[]" value="Lifeforms">Native
+                        Lifeforms</label><br>
+                    <label><input type="checkbox" id="planet-geology" name="planet-data[]" value="Geologu">Geological
+                        Survey</label><br>
+                    <label><input type="checkbox" id="planet-threats" name="planet-data[]" value="Threats">Known
+                        Environmental Threats</label><br>
+
+
+                    <p>
+                        <img src="images/forms_missions.png" alt="Image of mission control." class="rounded_img">
+                    </p>
+
+                    <label for="mission">Mission Details:</label>
+                    <select name="mission" id="mission">
+                        <option value="">-- Select a Mission</option>
+                        <option value="Operation Skyveil">Operation Skyveil</option>
+                        <option value="Project Echoframe">Project Echoframe</option>
+                        <option value="Operation Deeplock">Operation Deeplock</option>
+                        <option value="Project Chronoveil">Project Chronoveil</option>
+                    </select>
+
+                    <p>Mission Data Requested</p>
+
+                    <label for="mission-objectives"><input type="checkbox" id="mission-objectives" name="mission-data[]"
+                            value="Objectives">Planet
+                        Overview</label><br>
+                    <label for="mission-findings"><input type="checkbox" id="mission-findings" name="mission-data[]"
+                            value="Findings">Key Findings</label><br>
+                    <label for="mission-anomalies"><input type="checkbox" id="mission-anomalies" name="mission-data[]"
+                            value="Anomalies">Anomalies Detected</label><br>
+                    <label for="mission-outcome"><input type="checkbox" id="mission-outcome" name="mission-data[]"
+                            value="Outcome">Final Outcome</label><br>
+
+                    <p>
+                        <img src="images/forms_personnel.png" alt="Image of a workers on the planet's surface."
+                            class="rounded_img">
+                    </p>
+
+                    <label for="founder">Founding Members:</label>
+                    <select name="founder" id="founder">
+                        <option value="">-- Select a Founding Member --</option>
+                        <option value="Commander Elara Voss">Commander Elara Voss</option>
+                        <option value="Dr. Halden Mirek">Dr. Halden Mirek</option>
+                        <option value="Lt. Commander Naomi Chen">Lt. Commander Naomi Chen</option>
+                        <option value="Specialist Darius Flint">Specialist Darius Flint</option>
+                        <option value="Agent Isadora Wren">Agent Isadora Wren</option>
+                    </select>
+
+                    <p>Founding Member Info Requested:</p>
+
+
+
+                    <label for="founder-bio"><input type="checkbox" id="founder-bio" name="founder-data[]"
+                            value="Biography">Biography</label><br>
+                    <label for="founder-role"><input type="checkbox" id="founder-role" name="founder-data"
+                            value="Role">Project Role</label><br>
+                    <label for="founder-contributions"><input type="checkbox" id="founder-contributions"
+                            name="founder-data[]" value="Contributions">Major Contributions</label><br>
+                    <label for="founder-missions"><input type="checkbox" id="founder-missions" name="founder-data[]"
+                            value="Misions">Associated Missions</label>
+
+                </fieldset><br>
+
+
+                <fieldset>
+
+                    <legend>Processing Standards</legend>
+                    <p>Priority Level</p>
+
+                    <label for="standard"><input type="radio" id="standard" name="priority"
+                            value="Standard">Standard</label><br>
+                    <label for="urgent"><input type="radio" id="urgent" name="priority"
+                            value="Urgent">Urgent</label><br>
+
+                    <p>Department Level:</p>
+
+                    <label for="internal"><input type="radio" id="internal" name="deparmental" value="Internal"
+                            required>Internal</label><br>
+                    <label for="external"><input type="radio" id="external" name="deparmental"
+                            value="External">External</label><br>
+
+                    <p></p>
+
+
+                    <label for="details">Additional Details or Questions</label><br>
+                    <textarea name="details" id="details" rows="5" cols="40"
+                        placeholder="Enter any special instructions or questions here."></textarea>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Submit Request</button>
+                <button type="reset">Clear Form</button>
+
+
+
+            </form>
+
+
+        </div>
+    </main>
+    <footer>
+        <br>
+        <img src="images/logo.png" alt="The Project Astra logo." id="logo_image" />
+        <p>Copright &copy; 2025 <a href="https://www.starwars.com">"Project Astra Headquarters"</a> - Email: <a
+                href="mailto:jeff.thompsonjr1@gmail.com">send a email</a></p>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>

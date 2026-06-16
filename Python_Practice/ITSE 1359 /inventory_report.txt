@@ -1,0 +1,1 @@
+[{'Product': 'Laptop', 'Qty': 5, 'Price': 999.99}, {'Product': 'Mouse', 'Qty': 25, 'Price': 29.99}, {'Product': 'Keyboard', 'Qty': 15, 'Price': 79.99}, {'Product': 'Monitor', 'Qty': 8, 'Price': 299.99}]NoneNone{'Product': 'Mouse', 'Qty': 25, 'Price': 29.99}

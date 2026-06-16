@@ -1,0 +1,257 @@
+/*Selector-Background behind text and images -all pages */
+body{
+
+    background-color: rgb(74, 160, 199);
+    font-family: "Rubrik Spray Paint", cursive;
+
+}
+
+/* Class-Rounded Rectangle behind text and images -all pages */
+.rounded_background{
+
+    background-color: rgb(238, 218, 133);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    max-width: 1200px;
+    margin: 2em auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*ID-banner image - all pages*/
+
+#top_banner
+{
+    /* border-radius: 20px;
+    border: 10px solid rgb(238, 218, 133); */
+
+    outline: 0.75vw solid rgb(238, 218, 133);
+    border-radius: 1vw;
+}
+
+#logo_image{
+    border-radius: 20px;
+     border: 5px solid rgb(238, 218, 133);
+}
+
+/* footer - all pages */
+footer{
+    text-align: center;
+
+}
+
+/* any images -all pages */
+.rounded_img{
+
+border-radius: 1vw;
+display: block;
+margin: auto;
+
+}
+
+/* nav bar - all pages */
+.navContainer{
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+nav ul{
+    display:flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav ul li{
+    background-color: rgb(238, 218, 133);
+    border-radius: 10px;
+    width: 187px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    font-size: 1.5rem;
+
+}
+
+nav li a { 
+    text-decoration: none;
+}
+/* nav bar - all pages */
+
+/* gallary page grid system */
+
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colums */
+    gap: 100px;
+    row-gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.image-grid img{
+
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* types of toys page html lists */
+.modify_icon {
+    list-style-type: square; /* or 'circle', 'square', or custom */
+}
+
+#listGeneric {
+    list-style-position: inside;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #ffffff;
+    background-color: rgb(57, 123, 153);
+    border-radius: 20px;
+    padding: 1.23m 1.5em;
+    counter-reset: item;
+}
+
+.side-by-side dt{
+    float: left;
+    width: 20%;
+    font-weight: bold;
+    clear: left;
+
+}
+
+.side-by-side dd{
+   margin-left: 40%;
+   padding-bottom: 0.5em;
+
+}
+
+/* -- robot collection table --*/
+/* Table container styling */
+table {
+
+border-collapse: collapse;
+background-color: rgb(57, 123, 153);
+color: #dadd9e;
+margin-bottom: 2em;
+border-radius: 20px;
+overflow: hidden;
+
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+table th{
+
+    background-color: rgb(57, 123, 153);
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: .75em; 
+    text-align: center;
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+/* Image and text cells */
+table td {
+
+    vertical-align: top;
+    padding: 1em;
+    border-top: 1px solid rgb(17, 7, 51);
+}
+
+/* Image cell */
+table img{
+    border-radius: 8px;
+}
+
+/* toy name rows */
+table tr td[colspan="2"]{
+
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgb(39, 107, 138);
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+/* Paragrapht text in description text */
+table p{
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive editions*/
+
+.banner-container{
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1.7em;
+    display: flex;
+    justify-content: center;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries Additions */
+/* Phones */
+@media (max-width: 767px) {
+
+    .side-by-side dt {
+        width: 40%;
+    }
+
+    .side-by-side dd {
+        margin-left: 40%;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    #personnel_img
+    {
+    max-width: 128px;
+    height: 100%;
+}
+
+}
+
+
+/*Tablets*/
+@media (min-width: 768px) and (max-width: 1024px){
+.image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+    #personnel_img
+    {
+    max-width: 192px;
+    height: 100%;
+}
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+
+    #personnel_img
+    {
+    max-width: 256px;
+    height: 100%;
+}
+
+}

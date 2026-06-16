@@ -1,0 +1,172 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Welcome to the Toy Store. We have toys for everyone." />
+
+  <title>The Toy Store - Home</title>
+  <!-- Link to CSS File - styles.css-->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bring in a Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+</head>
+
+<body>
+  <header>
+
+    <div class="banner-container">
+      <img src="images/Banner.png" alt="image of multiple toys" id="top_banner" class="rounded_img">
+    </div>
+    <nav class="navContainer"><!-- Add in CSS Section-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Gallary.html">Toy Gallary</a></li>
+        <li><a href="Types.html">Types of Toys</a></li>
+        <li><a href="Robots.html">Vintage Robots</a></li>
+        <li>Future Button</li>
+        <li><a href="contact.html">Contact US</a></li>
+
+      </ul>
+
+
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="rounded_background"><!-- Add in CSS Section-->
+
+      <h1> The Toy Store - Contact Us</h1>
+
+      <p>
+        <img src="images/contact/form_banner.png" alt="Picture of toy train" class="rounded_img">
+      </p>
+      <br>
+
+      <form method="post" action="php/process.php">
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="George Smith" required>
+
+          <p></p>
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" placeholder="123 Drive Way" required>
+          <p></p>
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" placeholder="Dallas" required>
+
+          <p></p>
+
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" placeholder="Texas" required>
+
+
+          <p></p>
+
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip" placeholder="12345" required>
+
+
+          <p></p>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="something@gmail.com" required>
+
+
+
+
+
+        </fieldset>
+        <br>
+        <fieldset>
+
+          <legend>Information Request</legend>
+
+          <p>
+            <img src="images/contact/toys1_banner.png" alt="Picture of toy train" class="rounded_img">
+          </p>
+
+          <label for="favoriteToy">Select Your Favorite Toy:</label>
+          <select name="favoriteToy" id="favoriteToy">
+
+            <option value="">-- Select an Item</option>
+            <option value="Robot">Robot</option>
+            <option value="Doll">Doll</option>
+            <option value="Blocks">Blocks</option>
+            <option value="Train">Train</option>
+
+
+          </select>
+
+          <p>Information Choices:</p>
+          <label><input type="checkbox" name="toys[]" value="Value">The toy's Value</label><br>
+          <label><input type="checkbox" name="toys[]" value="History">The toy's history</label><br>
+          <label><input type="checkbox" name="toys[]" value="Date">The toy's manufactured date</label><br>
+          <label><input type="checkbox" name="toys[]" value="Company">Company Information</label><br>
+
+          <p>
+            <img src="images/contact/toys2_banner.png" alt="Picture of toy train" class="rounded_img">
+          </p>
+
+          <label for="favoriteRobot">What's Your Favorite Robot:</label>
+          <select name="favoriteRobot" id="favoriteRobot">
+            <option value="">-- Select an Option</option>
+            <option value="AstroTron X-5">AstroTron X-5</option>
+            <option value="MechMax3000">MechMax 3000</option>
+            <option value="Circuitron">Circuitron</option>
+            <option value="Volticon Zeta">Volticon Zeta</option>
+          </select>
+
+          <p>Robot Specific Information</p>
+
+          <label><input type="radio" name="robot" value="history"> History of the Robot Collection</label><br>
+          <label><input type="radio" name="robot" value="robots"> Robots in the collection</label><br>
+          <label><input type="radio" name="robot" value="construction"> Mechanical Robot Construction</label><br>
+          <label><input type="radio" name="robot" value="donate"> Have something to donate?</label>
+          <p></p>
+
+          <label for="details">Additional Details or Questions</label><br>
+          <textarea name="details" id="details" rows="5" cols="60"
+            placeholder="Enter any special instructions or questions here."></textarea>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Submit Request</button>
+        <button type="reset">Clear Form</button>
+
+
+
+      </form>
+
+
+
+
+
+
+
+    </div>
+
+
+  </main>
+  <footer>
+    <br />
+    <img src="images/small_logo.png" alt="image of logo" id="logo_image"><!-- Add in CSS Section-->
+    <p>
+      Copyright &copy; 2025 -
+      <a href="https://www.tstc.edu">Toy Store Headquarters</a> - Email:
+      <a href="mailto:jthompson142942@mymail.tstc.edu">Toy Store Email</a>
+    </p>
+  </footer>
+</body>
+
+</html>

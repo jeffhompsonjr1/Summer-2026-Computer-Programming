@@ -1,0 +1,7 @@
+Laptop,5,999.99
+
+Mouse,25,29.99
+
+Keyboard,15,79.99
+
+Monitor,8,299.99

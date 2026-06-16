@@ -1,0 +1,6 @@
+Python is a great programming language created in 1991.
+Learning Python is fun and rewarding for beginners.
+Many developers love Python because it is easy to read.
+Python can be used for web development and data analysis.
+Over 10 million developers use Python worldwide.
+Practice for 30 minutes daily makes perfect.

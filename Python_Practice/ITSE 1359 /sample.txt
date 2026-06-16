@@ -1,0 +1,5 @@
+Python is a great programming language.
+
+It is easy to learn and fun to use.
+
+Many developers love Python.
